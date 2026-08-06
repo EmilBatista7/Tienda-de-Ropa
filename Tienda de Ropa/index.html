@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleStore</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- ENCABEZADO -->
+    <header class="bg-white shadow-md">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="c:\Users\SENA\Downloads\logo emil.png" alt="Logo" class="h-10 w-10 object-contain">
+                <h1 class="text-2xl font-bold text-gray-800">A&E</h1>
+            </div>
+
+            <!-- Menú -->
+        <nav>
+            <ul class="flex space-x-8 text-gray-700 font-medium">
+        
+                <li>
+                    <a href="pages/nino.html" class="hover:text-blue-600 transition">
+                        Niño
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="pages/hombre.html" class="hover:text-blue-600 transition">
+                        Hombre
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="pages/mujer.html" class="hover:text-blue-600 transition">
+                        Mujer
+                    </a>
+                </li>
+        
+            </ul>
+        </nav>
+
+            <!-- Barra de búsqueda -->
+            <div class="flex items-center border rounded-lg overflow-hidden">
+
+                <input type="text" placeholder="Buscar..." class="px-3 py-2 outline-none">
+
+                <button class="bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+            <!-- Iconos -->
+            <div class="flex items-center space-x-6 text-xl text-gray-700">
+
+                <a href="#" class="hover:text-blue-600">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+                <a href="#" class="hover:text-blue-600 relative">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Contenido principal -->
+    <!-- HERO -->
+    <section class="relative h-[650px] flex items-center justify-center overflow-hidden">
+    
+        <!-- Imagen de fondo -->
+        <img src="c:\Users\SENA\Downloads\logo emil.png" alt="Banner" class="container inset-0 w-full h-full object-cover opacity-30">
+    
+        <!-- Capa oscura opcional -->
+        <div class="absolute inset-0 bg-white/10"></div>
+    
+        <!-- Contenido -->
+        <div class="relative z-10 text-center px-6">
+    
+            <h2 class="text-6xl font-bold text-gray-900">
+                La moda que define tu estilo
+            </h2>
+    
+            <p class="mt-6 text-xl text-gray-700 max-w-2xl mx-auto">
+                Encuentra las mejores prendas para hombre, mujer y niño.
+                Calidad, elegancia y comodidad en un solo lugar.</p>
+
+    
+        </div>
+    
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white mt-20">
+    
+        <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+    
+            <!-- Sobre Nosotros -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">
+                    Sobre Nosotros
+                </h3>
+    
+                <p class="text-gray-300">
+                    StyleStore ofrece prendas modernas para hombre, mujer y niño,
+                    combinando calidad, comodidad y estilo.
+                </p>
+            </div>
+    
+            <!-- Ayuda -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">
+                    Ayuda y Soporte
+                </h3>
+    
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-blue-400">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Contáctanos</a></li>
+                    <li><a href="#" class="hover:text-blue-400">Políticas de Devolución</a></li>
+                </ul>
+            </div>
+    
+            <!-- Novedades -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">
+                    Novedades
+                </h3>
+    
+                <p class="text-gray-300">
+                    Suscríbete para conocer promociones, descuentos y las nuevas
+                    colecciones de StyleStore.
+                </p>
+    
+                <button class="mt-4 bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg">
+                    Suscribirme
+                </button>
+            </div>
+    
+        </div>
+    
+        <!-- Línea inferior -->
+        <div class="border-t border-gray-700 text-center py-4 text-gray-400">
+            © 2026 StyleStore | Todos los derechos reservados.
+        </div>
+    
+    </footer>
+
+
+
+</body>
+
+</html>
