@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito | A&E</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body class="bg-[#f7f1eb] text-gray-800">
+
+
+    <!-- ================================= -->
+    <!-- HEADER -->
+    <!-- ================================= -->
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+
+            <!-- LOGO -->
+
+            <a href="../index.html" class="flex items-center gap-3">
+
+                <img src="../img/logo.png" alt="A&E" class="w-12 h-12 object-contain"
+                    onerror="this.style.display='none'">
+
+                <span class="text-2xl font-bold tracking-wide">
+
+                    A&E
+
+                </span>
+
+            </a>
+
+
+            <!-- MENU -->
+
+            <nav>
+
+                <ul class="hidden md:flex items-center gap-8 font-medium">
+
+                    <li>
+
+                        <a href="../index.html" class="hover:text-amber-700 transition">
+
+                            Inicio
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="hombre.html" class="hover:text-amber-700 transition">
+
+                            Hombre
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="mujer.html" class="hover:text-amber-700 transition">
+
+                            Mujer
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="nino.html" class="hover:text-amber-700 transition">
+
+                            Niño
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- ICONOS -->
+
+            <div class="flex items-center gap-6 text-xl">
+
+
+
+
+
+                <a href="carrito.html" class="relative text-amber-700">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+
+                    <span id="contador-carrito"
+                        class="absolute -top-3 -right-3 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+
+                        0
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================= -->
+    <!-- TITULO -->
+    <!-- ================================= -->
+
+    <section class="relative text-center pt-14 pb-10 px-6 overflow-hidden">
+
+
+        <!-- MARCA DE AGUA -->
+
+        <span class="absolute left-1/2 top-1/2
+            -translate-x-1/2 -translate-y-1/2
+            text-[180px] md:text-[250px]
+            font-bold text-amber-900 opacity-[0.025]
+            pointer-events-none select-none">
+
+            A&E
+
+        </span>
+
+
+        <div class="relative z-10">
+
+            <p class="text-amber-700 font-semibold uppercase tracking-[0.3em] text-sm">
+
+                A&E
+
+            </p>
+
+
+            <h1 class="text-5xl font-bold mt-3">
+
+                Mi carrito
+
+            </h1>
+
+
+            <p class="text-gray-500 mt-4">
+
+                Revisa tus productos antes de continuar.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- CONTENIDO -->
+    <!-- ================================= -->
+
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+
+            <!-- ================================= -->
+            <!-- PRODUCTOS -->
+            <!-- ================================= -->
+
+            <section class="lg:col-span-2">
+
+
+                <div class="bg-white rounded-2xl shadow-sm p-6">
+
+
+                    <div class="flex items-center justify-between mb-6">
+
+
+                        <h2 class="text-2xl font-bold">
+
+                            Productos
+
+                        </h2>
+
+
+                        <button id="vaciar-carrito" class="text-red-600 hover:text-red-800 text-sm font-medium">
+
+                            <i class="fa-solid fa-trash mr-1"></i>
+
+                            Vaciar carrito
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- AQUÍ APARECEN LOS PRODUCTOS -->
+
+                    <div id="lista-carrito" class="space-y-5">
+
+                    </div>
+
+
+                    <!-- CARRITO VACÍO -->
+
+                    <div id="carrito-vacio" class="hidden text-center py-16">
+
+
+                        <i class="fa-solid fa-bag-shopping text-6xl text-gray-300">
+                        </i>
+
+
+                        <h3 class="text-2xl font-bold mt-5">
+
+                            Tu carrito está vacío
+
+                        </h3>
+
+
+                        <p class="text-gray-500 mt-2">
+
+                            Agrega algunos productos para comenzar.
+
+                        </p>
+
+
+                        <a href="hombre.html"
+                            class="inline-block mt-6 bg-gray-900 text-white px-6 py-3 rounded-xl hover:bg-amber-700 transition">
+
+                            Ver productos
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================= -->
+            <!-- RESUMEN -->
+            <!-- ================================= -->
+
+            <aside>
+
+                <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-28">
+
+
+                    <h2 class="text-2xl font-bold mb-6">
+
+                        Resumen del pedido
+
+                    </h2>
+
+
+                    <!-- SUBTOTAL -->
+
+                    <div class="flex justify-between mb-4 text-gray-600">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="subtotal">
+                            $0.00
+                        </span>
+
+                    </div>
+
+
+                    <!-- ENVIO -->
+
+                    <div class="flex justify-between mb-4 text-gray-600">
+
+                        <span>
+                            Envío
+                        </span>
+
+                        <span id="envio">
+                            $0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="border-t pt-4 mt-4">
+
+
+                        <div class="flex justify-between items-center">
+
+
+                            <span class="text-xl font-bold">
+
+                                Total
+
+                            </span>
+
+
+                            <span id="total" class="text-2xl font-bold text-amber-700">
+
+                                $0.00
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COMPRAR -->
+
+                    <button id="btn-comprar"
+                        class="w-full mt-7 bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-amber-700 transition">
+
+                        <i class="fa-solid fa-credit-card mr-2">
+                        </i>
+
+                        Finalizar compra
+
+                    </button>
+
+
+                    <!-- CONTINUAR -->
+
+                    <a href="hombre.html" class="block text-center mt-4 text-gray-500 hover:text-amber-700">
+
+                        ← Continuar comprando
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================================= -->
+    <!-- FOOTER -->
+    <!-- ================================= -->
+
+    <footer class="bg-gray-900 text-white">
+
+
+        <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+
+
+            <div>
+
+                <h3 class="text-2xl font-bold mb-4">
+
+                    A&E
+
+                </h3>
+
+                <p class="text-gray-400">
+
+                    Moda, calidad y estilo para
+                    todos los momentos.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="font-bold text-lg mb-4">
+
+                    Navegación
+
+                </h3>
+
+                <ul class="space-y-2 text-gray-400">
+
+                    <li>
+                        <a href="../index.html" class="hover:text-white">
+
+                            Inicio
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hombre.html" class="hover:text-white">
+
+                            Hombre
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mujer.html" class="hover:text-white">
+
+                            Mujer
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="nino.html" class="hover:text-white">
+
+                            Niño
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="font-bold text-lg mb-4">
+
+                    Ayuda
+
+                </h3>
+
+                <ul class="space-y-2 text-gray-400">
+
+                    <li>
+                        Preguntas frecuentes
+                    </li>
+
+                    <li>
+                        Contáctanos
+                    </li>
+
+                    <li>
+                        Políticas de devolución
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-gray-800
+            text-center py-5 text-gray-500">
+
+            © 2026 A&E | Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/carrito.js"></script>
+
+</body>
+
+</html>

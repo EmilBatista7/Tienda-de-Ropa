@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedido confirmado | A&E</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body class="bg-[#f7f1eb] min-h-screen">
+
+
+    <main class="min-h-screen flex items-center justify-center px-6">
+
+
+        <div class="bg-white max-w-lg w-full rounded-2xl shadow-lg p-10 text-center">
+
+
+            <!-- ICONO -->
+
+            <div class="w-20 h-20 mx-auto rounded-full
+                bg-green-100 flex items-center justify-center">
+
+                <i class="fa-solid fa-check text-4xl text-green-600">
+                </i>
+
+            </div>
+
+
+            <!-- TITULO -->
+
+            <h1 class="text-4xl font-bold mt-7">
+
+                ¡Pedido realizado!
+
+            </h1>
+
+
+            <p class="text-gray-500 mt-4">
+
+                Gracias por comprar en A&E.
+
+            </p>
+
+
+            <p id="cliente" class="text-gray-600 mt-3">
+
+            </p>
+
+
+            <!-- PEDIDO -->
+
+            <div class="bg-gray-50 rounded-xl p-5 mt-7 text-left">
+
+
+                <p class="font-semibold mb-3">
+
+                    Detalles del pedido
+
+                </p>
+
+
+                <p id="fecha" class="text-gray-600 text-sm">
+
+                </p>
+
+
+                <p id="metodo-pago" class="text-gray-600 text-sm mt-2">
+
+                </p>
+
+            </div>
+
+
+            <!-- BOTON -->
+
+            <a href="../index.html" class="inline-block mt-8 bg-gray-900 text-white
+                px-8 py-3 rounded-xl
+                hover:bg-amber-700 transition">
+
+                <i class="fa-solid fa-house mr-2"></i>
+
+                Volver al inicio
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const pedido =
+            JSON.parse(
+                localStorage.getItem("ultimoPedido")
+            );
+
+
+        if (pedido) {
+
+            document.getElementById("cliente").textContent =
+                `Gracias ${pedido.nombre}, hemos recibido tu pedido.`;
+
+            document.getElementById("fecha").textContent =
+                `Fecha: ${pedido.fecha}`;
+
+            document.getElementById("metodo-pago").textContent =
+                `Método de pago: ${pedido.pago}`;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
