@@ -1,0 +1,61 @@
+/* =================================
+   ESTILOS GENERALES A&E
+================================= */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.logo-ae {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+
+/* =================================
+   EFECTO DE MARCA DE AGUA
+================================= */
+
+.marca-agua {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    opacity: 0.04;
+    pointer-events: none;
+    user-select: none;
+}
+
+
+/* =================================
+   TARJETAS DE PRODUCTOS
+================================= */
+
+.tarjeta-producto {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =================================
+   BOTONES
+================================= */
+
+.boton-ae {
+    transition: all 0.3s ease;
+}
+
+.boton-ae:hover {
+    transform: translateY(-2px);
+}

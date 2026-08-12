@@ -1,0 +1,13 @@
+c:\Users\SENA\Downloads\logo emil.png
+
+<img
+    src="../img/logo.png"
+    alt="Logo A&E"
+    class="w-12 h-12 object-contain">
+
+    <img
+    src="../img/logo.png"
+    alt="Logo A&E"
+    class="w-20 h-20">
+
+    logo: https://images.seeklogo.com/logo-png/17/2/ae-television-logo-png_seeklogo-174928.png

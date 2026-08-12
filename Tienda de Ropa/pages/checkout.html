@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar compra | A&E</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body class="bg-[#f7f1eb] text-gray-800">
+
+
+    <!-- HEADER -->
+
+    <header class="bg-white shadow-sm">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <a href="../index.html" class="flex items-center gap-3">
+
+                <img src="../img/logo.png" alt="A&E" class="w-12 h-12 object-contain">
+
+                <span class="text-2xl font-bold">
+                    A&E
+                </span>
+
+            </a>
+
+
+            <a href="carrito.html" class="text-gray-600 hover:text-amber-700">
+
+                <i class="fa-solid fa-arrow-left mr-2"></i>
+
+                Volver al carrito
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- TITULO -->
+
+    <section class="text-center py-12">
+
+        <p class="text-amber-700 font-semibold uppercase tracking-widest text-sm">
+            A&E
+        </p>
+
+        <h1 class="text-5xl font-bold mt-3">
+            Finalizar compra
+        </h1>
+
+        <p class="text-gray-500 mt-4">
+            Completa tus datos para realizar tu pedido.
+        </p>
+
+    </section>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+
+            <!-- FORMULARIO -->
+
+            <section class="lg:col-span-2">
+
+                <div class="bg-white rounded-2xl shadow-sm p-8">
+
+                    <h2 class="text-2xl font-bold mb-6">
+                        Datos de envío
+                    </h2>
+
+
+                    <form id="form-compra">
+
+
+                        <!-- NOMBRE -->
+
+                        <div class="mb-5">
+
+                            <label for="nombre" class="block font-medium mb-2">
+
+                                Nombre completo
+
+                            </label>
+
+                            <input type="text" id="nombre" required placeholder="Escribe tu nombre"
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                        </div>
+
+
+                        <!-- TELEFONO -->
+
+                        <div class="mb-5">
+
+                            <label for="telefono" class="block font-medium mb-2">
+
+                                Teléfono
+
+                            </label>
+
+                            <input type="tel" id="telefono" required placeholder="300 000 0000"
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                        </div>
+
+
+                        <!-- CORREO -->
+
+                        <div class="mb-5">
+
+                            <label for="correo" class="block font-medium mb-2">
+
+                                Correo electrónico
+
+                            </label>
+
+                            <input type="email" id="correo" required placeholder="correo@ejemplo.com"
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                        </div>
+
+
+                        <!-- DIRECCION -->
+
+                        <div class="mb-5">
+
+                            <label for="direccion" class="block font-medium mb-2">
+
+                                Dirección
+
+                            </label>
+
+                            <input type="text" id="direccion" required placeholder="Calle 10 # 20-30"
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                        </div>
+
+
+                        <!-- CIUDAD -->
+
+                        <div class="mb-5">
+
+                            <label for="ciudad" class="block font-medium mb-2">
+
+                                Ciudad
+
+                            </label>
+
+                            <input type="text" id="ciudad" required placeholder="Bogotá"
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                        </div>
+
+
+                        <!-- METODO DE PAGO -->
+
+                        <div class="mb-6">
+
+                            <label for="pago" class="block font-medium mb-2">
+
+                                Método de pago
+
+                            </label>
+
+                            <select id="pago" required
+                                class="w-full border rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-amber-500">
+
+                                <option value="">
+                                    Selecciona un método
+                                </option>
+
+                                <option value="Contra entrega">
+                                    Contra entrega
+                                </option>
+
+                                <option value="Transferencia">
+                                    Transferencia bancaria
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- MENSAJE -->
+
+                        <p id="mensaje-compra" class="text-center mb-5">
+                        </p>
+
+
+                        <!-- BOTON -->
+
+                        <button type="submit"
+                            class="w-full bg-gray-900 text-white py-4 rounded-xl font-semibold hover:bg-amber-700 transition">
+
+                            <i class="fa-solid fa-check mr-2"></i>
+
+                            Confirmar pedido
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMEN -->
+
+            <aside>
+
+                <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-8">
+
+                    <h2 class="text-2xl font-bold mb-6">
+                        Resumen
+                    </h2>
+
+
+                    <div id="resumen-productos" class="space-y-4 mb-6">
+
+                    </div>
+
+
+                    <div class="border-t pt-4">
+
+                        <div class="flex justify-between text-gray-600 mb-3">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <span id="subtotal-checkout">
+                                $0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between text-gray-600 mb-3">
+
+                            <span>
+                                Envío
+                            </span>
+
+                            <span>
+                                Gratis
+                            </span>
+
+                        </div>
+
+
+                        <div class="border-t pt-4 flex justify-between">
+
+                            <span class="text-xl font-bold">
+                                Total
+                            </span>
+
+                            <span id="total-checkout" class="text-2xl font-bold text-amber-700">
+
+                                $0.00
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-gray-900 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+
+            <p class="text-gray-400">
+
+                © 2026 A&E | Todos los derechos reservados.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>
